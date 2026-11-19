@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdf1b4e2xs7o2"]
+
+[ext_resource type="Texture2D" uid="uid://d0akg1obqjbfx" path="res://Assets/meteorBrown_big3.png" id="1_bsvsg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i186k"]
+size = Vector2(69.5, 68.75)
+
+[node name="asteroid" type="StaticBody2D" groups=["asteroid"]]
+collision_layer = 8
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bsvsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_i186k")

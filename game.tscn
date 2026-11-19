@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://b372pa0xs5mg3"]
+[gd_scene load_steps=4 format=3 uid="uid://b372pa0xs5mg3"]
+
+[ext_resource type="PackedScene" uid="uid://dtgmyudhrgeqw" path="res://Scenes/Player/player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://cdf1b4e2xs7o2" path="res://Scenes/Map Stuff/asteroid.tscn" id="3_feb5d"]
+[ext_resource type="Script" uid="uid://yg4es0ckspiw" path="res://Scripts/spawner.gd" id="4_fc0e3"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_80nbo")]
+
+[node name="Spawner" type="Node" parent="."]
+script = ExtResource("4_fc0e3")
+
+[node name="asteroid" parent="." instance=ExtResource("3_feb5d")]
+position = Vector2(506, -193)
+scale = Vector2(3.5200024, 3.5200024)
+
+[node name="asteroid2" parent="." instance=ExtResource("3_feb5d")]
+position = Vector2(-448, -475)
+scale = Vector2(3.5200024, 3.5200024)
+
+[node name="asteroid4" parent="." instance=ExtResource("3_feb5d")]
+position = Vector2(506, 622)
+scale = Vector2(3.5200024, 3.5200024)
+
+[node name="asteroid3" parent="." instance=ExtResource("3_feb5d")]
+position = Vector2(-585.00006, 440.00003)
+scale = Vector2(3.5200024, 3.5200024)
